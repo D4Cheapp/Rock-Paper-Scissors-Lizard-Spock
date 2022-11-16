@@ -1,0 +1,242 @@
+.ScoreForAll {
+  position: relative;
+  display: flex;
+  margin-inline: 24vw;
+  margin-top: 3.5vw;
+  height: 11vw;
+  color: white;
+  border: rgba(255, 255, 255, 0.5) 2px solid;
+  border-radius: 2vw;
+}
+.ScoreForAll img {
+  transform: scale(0.7);
+}
+.ScoreForAll div.ScoreScore {
+  text-align: center;
+  position: absolute;
+  right: 2.5vw;
+  top: 1.2vw;
+  width: 10vw;
+  height: 8vw;
+  line-height: 0;
+  letter-spacing: 2px;
+  background: white;
+  border-radius: 1vw;
+  color: #5565AF;
+}
+.ScoreForAll div.ScoreScore p.ScoreLogo {
+  margin-top: 1.5vw;
+  font-size: 1.5vw;
+}
+.ScoreForAll div.ScoreScore p.ScorePoints {
+  margin-top: 3.5vw;
+  font-weight: 700;
+  font-size: 5vw;
+  color: #565469;
+}
+
+.Blur {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.RulesButton {
+  position: absolute;
+  right: 3vw;
+  bottom: 3vw;
+  width: 25vh;
+  height: 8vh;
+  background: transparent;
+  border: rgba(255, 255, 255, 0.5) 2px solid;
+  border-radius: 3vh;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.2vw;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.RulesButton:hover {
+  transform: scale(1.1);
+}
+
+.RulesWindow {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30vw;
+  height: 30vw;
+  background: white;
+  border-radius: 2vw;
+}
+.RulesWindow img.Rule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 2vw;
+  width: 22vw;
+}
+.RulesWindow button {
+  border: none;
+  background: transparent;
+  position: absolute;
+  margin-top: 2.7vw;
+  right: 3vw;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.RulesWindow button:hover {
+  transform: scale(1.2);
+}
+.RulesWindow p {
+  position: absolute;
+  margin-top: 2vw;
+  margin-left: 2vw;
+  color: #565469;
+  font-size: 3vw;
+  font-weight: 800;
+}
+.RulesWindow img {
+  width: 2vw;
+}
+
+@media screen and (orientation: portrait) {
+  .RulesWindow {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .RulesWindow p {
+    left: 0;
+    right: 0;
+    width: 13vh;
+    font-size: 5vh;
+    margin: 10vh auto 0;
+  }
+  .RulesWindow img.Rule {
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 40vh;
+  }
+  .RulesWindow button {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-bottom: 10vw;
+  }
+  .RulesWindow button img {
+    width: 5vh;
+  }
+  .RulesButton {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 4vh;
+  }
+}
+div.ChoiceRPS {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 25%;
+  height: 22vw;
+  margin: 15vh auto 0;
+}
+
+div.Choice_Button {
+  cursor: pointer;
+  position: relative;
+  height: 4vw;
+  border: #5565AF 1.2vw solid;
+  border-radius: 50%;
+  background: #DDDDDD;
+  padding: 2vw;
+  width: 4vw;
+  transition: 0.2s;
+  -webkit-user-select: none;
+}
+div.Choice_Button img {
+  -webkit-user-drag: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 4vw;
+}
+div.Choice_Button:active {
+  transform: scale(0.9);
+}
+
+.ChoiceRPS_Triangle {
+  -webkit-user-select: none;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  width: 20vw;
+  margin: 0 auto;
+}
+
+div.rock {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+div.scissors {
+  position: absolute;
+  right: 0;
+  margin-right: -2vw;
+  margin-top: -4vw;
+}
+
+div.paper {
+  position: absolute;
+  left: 0;
+  margin-left: -2vw;
+  margin-top: -4vw;
+}
+
+.Game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+div.host, div.playing {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: scale(1.7);
+  cursor: auto;
+}
+div.host:active, div.playing:active {
+  transform: scale(1.7);
+}
+
+div.playing {
+  left: 20vw;
+}
+
+div.host {
+  right: 20vw;
+}
+
+/*# sourceMappingURL=indexDesktop.css.map */

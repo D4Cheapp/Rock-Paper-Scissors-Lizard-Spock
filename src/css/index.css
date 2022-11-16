@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+.Circles {
+  position: absolute;
+}
+
+.appBackground {
+  top: 0;
+  left: 0;
+  z-index: -10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at top, #1F3857, #131637);
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/*# sourceMappingURL=index.css.map */
