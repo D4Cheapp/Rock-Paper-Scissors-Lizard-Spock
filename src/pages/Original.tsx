@@ -1,11 +1,21 @@
-import {ChooseOriginalDesktop} from "../components/chooseOriginalDesktop";
+import {Choose} from "../components/Choose";
 import Rules from "../images/image-rules.svg";
-import "../sass/desktop/indexDesktop.sass";
+import "../sass/indexDesktop.sass";
 import Paper from "../images/icon-paper.svg";
 import Scissors from "../images/icon-scissors.svg";
 import Rock from "../images/icon-rock.svg";
 
-export const RPS =[
+export interface RPSinterface{
+    image:string,
+    type:string,
+    color:{borderColor:string}
+}
+const RPS:RPSinterface[] =[
+    {
+        image:Rock,
+        type:"rock",
+        color:{borderColor:"#DE405B"},
+    },
     {
         image:Paper,
         type:"paper",
@@ -15,19 +25,20 @@ export const RPS =[
         image:Scissors,
         type:"scissors",
         color: {borderColor: "#ECA825"}
-    },
-    {
-        image:Rock,
-        type:"rock",
-        color:{borderColor:"#DE405B"},
     }
 ]
 
-export function DesktopOriginal(){
+const WhoBeats={
+    "rock":["scissors"],
+    "scissors":["paper"],
+    "paper":["rock"]
+}
+
+export function Original(){
     return(
         <>
             <link rel="preload" as="image" href={Rules}/>
-            <ChooseOriginalDesktop/>
+            <Choose RPS={RPS} WhoBeats={WhoBeats}/>
         </>
     );
 }

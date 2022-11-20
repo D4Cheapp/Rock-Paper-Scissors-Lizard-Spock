@@ -16,6 +16,7 @@ specifiers:
   gulp: ^4.0.2
   gulp-sass: ^5.1.0
   node-sass: 8.0.0
+  pnpm: ^7.16.1
   react: ^18.2.0
   react-dom: ^18.2.0
   react-redux: ^8.0.5
@@ -41,6 +42,7 @@ dependencies:
   gulp: 4.0.2
   gulp-sass: 5.1.0
   node-sass: 8.0.0
+  pnpm: 7.16.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-redux: 8.0.5_ux5ypa4vfeu6lrs5gncpqp4a4u
@@ -9153,6 +9155,12 @@ packages:
       arr-diff: 4.0.0
       arr-union: 3.1.0
       extend-shallow: 3.0.2
+    dev: false
+
+  /pnpm/7.16.1:
+    resolution: {integrity: sha512-vtAw/kJ+Slm/XdLvd3zbSA8FKBgetrk+1KQFDnyvPP0q2Pjc1f2HsA7idYs9MJewYi4o03cjyZhAdqrCcjknsw==}
+    engines: {node: '>=14.6'}
+    hasBin: true
     dev: false
 
   /posix-character-classes/0.1.1:

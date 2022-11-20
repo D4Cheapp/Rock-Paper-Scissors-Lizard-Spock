@@ -1,6 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 .Circles {
-  position: absolute;
+  z-index: -1;
+  animation: pulse 1.5s ease;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #2B3858;
+  }
+  50% {
+    box-shadow: 0 0 0 9vw #223351;
+  }
+  100% {
+    box-shadow: 0 0 0 5vw rgba(255, 255, 255, 0);
+  }
 }
 
 .appBackground {

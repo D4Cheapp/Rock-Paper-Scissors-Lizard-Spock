@@ -1,10 +1,9 @@
-export interface Resucer{
+export interface ScoreReducer {
     score:number,
 }
-const initialState:Resucer = {
+const initialState:ScoreReducer = {
     score: 0
 }
-
 export interface IncrementScore{
     type:"INCREMENT",
 }
@@ -13,10 +12,13 @@ export interface DecrementScore{
 }
 export type Actions = IncrementScore | DecrementScore;
 
-export default function scoreReducer(state:Resucer = initialState,action: Actions):Resucer{
+export default function scoreReducer(state:ScoreReducer = initialState, action: Actions):ScoreReducer{
     switch (action.type){
-        case "DECREMENT": return {score:state.score-=1}
-        case "INCREMENT": return {score:state.score+=1}
+        case "DECREMENT":
+            if(state.score > 0)
+                return {score:state.score-1};
+            return state;
+        case "INCREMENT": return {score:state.score+1};
         default: return state;
     }
 }

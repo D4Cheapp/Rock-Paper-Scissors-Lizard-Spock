@@ -11,7 +11,10 @@
 .RulesButton {
   position: absolute;
   right: 3vw;
-  bottom: 3vw;
+  bottom: 3vh;
+}
+
+.RulesButton, .Tumbler button {
   width: 25vh;
   height: 8vh;
   background: transparent;
@@ -24,8 +27,14 @@
   cursor: pointer;
   transition: 0.2s;
 }
-.RulesButton:hover {
+.RulesButton:hover, .Tumbler button:hover {
   transform: scale(1.1);
+}
+
+.Tumbler {
+  position: absolute;
+  left: 3vw;
+  bottom: 3vh;
 }
 
 .RulesWindow {
@@ -74,6 +83,9 @@
 }
 
 @media screen and (orientation: portrait) {
+  .RulesButton, .Tumbler button {
+    font-size: 4vh;
+  }
   .RulesWindow {
     width: 100%;
     height: 100%;
@@ -95,17 +107,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 0 auto;
-    margin-bottom: 10vw;
+    margin: 0 auto 10vw;
   }
   .RulesWindow button img {
     width: 5vh;
-  }
-  .RulesButton {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    font-size: 4vh;
   }
 }
 
